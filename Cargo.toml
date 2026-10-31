@@ -1,0 +1,19 @@
+[package]
+name = "r-x-halloween2026"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = { version = "0.31", default-features = false, features = ["glow", "default_fonts"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen-futures = "0.4"
+console_error_panic_hook = "0.1"
+
+[dev-dependencies]
+image = { version = "0.25", default-features = false, features = ["png"] }
+wasm-bindgen-test = "0.3"
+
+[features]
+default = ["native"]
+native = ["eframe/x11", "eframe/wayland"]

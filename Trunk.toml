@@ -1,0 +1,9 @@
+# Default project settings: always build wasm in release (dev-profile wasm is
+# 10-30x slower; the CPU x-ring first frame stalls the UI "Loading" forever).
+[build]
+target = "index.html"
+dist = "dist"
+release = true
+
+[serve]
+port = 8082
